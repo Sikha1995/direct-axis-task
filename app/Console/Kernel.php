@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Jobs\SendEmailJob; 
 
 class Kernel extends ConsoleKernel
 {
@@ -13,6 +14,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        $details['email'] = 'sikhaouvady@gmail.com';
+
+        $schedule->job(new SendEmailJob($details))->hourly();
     }
 
     /**
