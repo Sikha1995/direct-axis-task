@@ -18,7 +18,7 @@ PUT /api/tasks/{id}: Update a task's details.
 DELETE /api/tasks/{id}: Delete a task.
 Task attributes: title, description, due_date, status (pending, completed), priority (low, medium, high).
 Implement a queue job for sending task reminder emails to users a day before the task's due date. - http://127.0.0.1:8000/send-mail
-Implement a scheduler that runs every hour to process the queue 
+Implement a scheduler that runs every hour to process the queue - not working in localhost
 Use Laravel's built-in Eloquent ORM for database interactions.
 Use appropriate HTTP status codes and JSON responses for API interactions.
 Add pagination to the list of tasks endpoint.
